@@ -1,0 +1,131 @@
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Image and heading */
+
+.image{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+h1{
+    position: absolute;
+    top: 4%;
+    left: 35%;
+    font-size: 55px;
+    font-weight: 700;
+    font-family: 'New Rocker', cursive;
+}
+
+.word{
+    color: #F15B22;
+}
+
+/* Bat and Ball */
+
+.bat-1, .bat-2{
+    width: 400px;
+    height: 400px;
+}
+
+.bat1{
+    position:absolute;
+    left: 0%;
+    top: 22%;
+}
+
+.bat2{
+    position: absolute;
+    top: 22%;
+    left: 73%;
+}
+
+.ball{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    border-color:5px solid black;
+    border-radius: 25px;
+    background-color: white;
+    left: 20%;
+    top: 47%;
+}
+
+/* Bat and Ball Animation */
+@keyframes bat-1_hit {
+    0%{
+        transform: rotate(40deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes bat-2_hit {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-40deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes ball_hit{
+    0%{
+        top: 47%;
+        left: 20%;
+    }
+    25%{
+        top: 76%;
+        left: 48%;
+    }
+    50%{
+        top: 47%;
+        left: 74%;
+    }
+    75%{
+        top: 76%;
+        left: 48%;
+    }
+    100%{
+        top: 47%;
+        left: 20%;
+    }
+}
+
+.bat-1{
+    animation: bat-1_hit 5s ease-in 5s infinite alternate ;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.ball{
+    animation: ball_hit 5s ease-in-out 5s infinite alternate;
+    animation-play-state: running;
+}
+
+.bat-2{
+    animation: bat-2_hit 5s ease-in 5s infinite alternate ;
+}
+
+/* End */
